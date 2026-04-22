@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-console-bg: #0c0d0e;
+  --color-console-surface: #1a1b1e;
+  --color-console-border: #2a2c31;
+  --color-btn-border: #40444b;
+  --color-btn-shadow: #151618;
+  --color-lcd-bg: #00120a;
+  --color-lcd-text: #00ff41;
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer components {
+  .console-surface {
+    @apply bg-console-surface border-2 border-console-border rounded-lg shadow-[inset_0_2px_10px_rgba(0,0,0,0.5)];
+  }
+
+  .ma-btn {
+    @apply bg-linear-to-br from-[#32353b] to-[#25282c] border border-btn-border text-zinc-300 font-semibold text-[11px] uppercase tracking-wider flex items-center justify-center text-center rounded shadow-[0_4px_0_#151618] active:translate-y-[2px] active:shadow-[0_2px_0_#151618] active:bg-[#40444b] transition-none cursor-pointer;
+  }
+
+  .ma-btn-yellow { @apply border-t-4 border-t-yellow-500; }
+  .ma-btn-green { @apply border-t-4 border-t-green-500; }
+  .ma-btn-red { @apply border-t-4 border-t-red-500; }
+  .ma-btn-blue { @apply border-t-4 border-t-blue-500; }
+
+  .lcd-display {
+    @apply bg-lcd-bg text-lcd-text font-mono border-2 border-zinc-800 p-3 rounded shadow-[inset_0_0_10px_rgba(0,255,65,0.2)];
+  }
+
+  .status-dot {
+    @apply w-2 h-2 rounded-full;
+  }
+
+  .status-online {
+    @apply bg-green-500 shadow-[0_0_8px_#22c55e];
+  }
+}

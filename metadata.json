@@ -1,0 +1,6 @@
+{
+  "name": "grandMA2 Remote Control",
+  "description": "A professional web-based remote control for grandMA2 lighting consoles using Telnet syntax commands.",
+  "requestFramePermissions": ["camera", "bluetooth", "usb", "serial"],
+  "majorCapabilities": []
+}
